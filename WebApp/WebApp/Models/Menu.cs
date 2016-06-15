@@ -11,13 +11,11 @@ namespace WebApp.Models
         public int Id { get; set; }
 
         [Required]
-        // [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd'/'MM'/'yyyy}")]
         public DateTime Date { get; set; }
 
-        [Required]
         public int? OrganizationId { get; set; }
 
-        [Required]
         public int? DishId { get; set; }
 
         public virtual Dish Dish { get; set; }

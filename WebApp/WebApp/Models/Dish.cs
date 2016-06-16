@@ -14,7 +14,7 @@ namespace WebApp.Models
         public string Name { get; set; }
 
         //[Required]
-        //[RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only please")]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only please")]
         public string Ingredients { get; set; }
 
         //[Required]

@@ -6,235 +6,108 @@
 }
 
 <h2>Create</h2>
-<div>
-    <div class="span5">
-        @using (Html.BeginForm("Create", "Dishes", FormMethod.Post, new { @id = "form" }))
-        {
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary(true)
-            <fieldset>
-                <legend></legend>
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(model => model.Name, new { @class = "span3", style = "display:block;width:270px;;float:left", placeholder = "Enter the goal name" })<br>
-                        @Html.ValidationMessageFor(model => model.Name)
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
-                            </div>
-                        </div>
-                    </div>
-                            <div class="col-md-10">
-                                @Html.TextAreaFor(model => model.Desc, new { @class = "span3", placeholder = "Enter the description", style = "display:block;width:270px;;float:left" })
-                                div             @Html.ValidationMessageFor(model => model.Desc)
-                               
-                                        @Html.TextBoxFor(model => model.StartDate, new { @class = "ui-datepicker span3", @style = "display:block;width:270px;;float:left", placeholder = "Enter the start date", @readonly = "readonly" })
-                                        @Html.ValidationMessageFor(model => model.StartDate)
-                                    </td>
-                                </tr>
-                                <tr>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
-                                    <td>
-                                        @Html.TextBoxFor(model => model.EndDate, new { @class = "ui-datepicker span3", @style = "display:block;width:270px;;float:left", placeholder = "Enter the end date", @readonly = "readonly" })
-                                        @Html.ValidationMessageFor(model => model.EndDate)
-                                    </td>
-                                </tr>
-                                <tr>
-
-                                    <td>
-
-                                        @Html.DropDownListFor(model => model.MetricId, Model.Metrics, "--Select Metric--", new { @class = "span4", @style = "display:block;width:270px;;float:left" })
-                                        @Html.ValidationMessageFor(model => model.MetricId)
-                                    </td>
-                                </tr>
-                                <tr>
-
-                                    <td>
-                                        @Html.TextBoxFor(model => model.Target, new { @class = "span3", id = "Target", placeholder = "Enter the target to be achieved", style = "width: 270px;" })
-                                        <a href="#" id="targetinfo" rel="popover" data-content="Fix the target of the goal based on metric selected" data-trigger="hover" data-placement="top" data-originals-title="Target"><i class="icon-info-sign"></i> </a>
-                                        <div id="NumberValidation"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.CheckBoxFor(model => model.GoalType, true)&nbsp;&nbsp;Make this goal as private</td>
-                                </tr>
-                                <tr><td height="20"></td></tr>
-                                <tr>
-                                    <td>
-                                        <button id="submitbtn" class="btn btn-primary" value="Submit"> Create</button>&nbsp;&nbsp;
-                                        <button class="btn" type="reset" value="Cancel" onclick="window.location.href='@Url.Action("Index", "Home")'">Cancel</button>
-                                    </td>
-                                </tr>
-
-                                @Html.Hidden("UserId", User.Identity.GetUserId())
-
-                </table>
-
-</fieldset>
-        }
-    </div>
-</div>
-<script type="text/javascript">
-
-
-    $(document).ready(function () {
-
-        $('.ui-datepicker').each(function (i, v) {
-            $(v).datepicker({
-                dateFormat: 'dd-M-yy',
-                buttonImage: '@Url.Content("~/Content/calendar.gif")',
-                buttonImageOnly: true,
-                showOn: "button"
-            });
-
-        });
-
-        $('#form').submit(function (e) {
-            var target = $('#Target').val();
-            if (target != '') {
-                if (DecimalValidate(target)) {
-                    $('#NumberValidation').html('');
-                    return true;
-                }
-                else {
-                    $('#NumberValidation').html('<label class="field-validation-error">Please enter valid status</label>');
-                    e.preventDefault();
-                    return false;
-                }
-            }
-
-        });
-
-    });
-
-    $("#Description").focus(function () {
-        $(this).animate({ "height": "60px" }, "slow");
-        return false;
-    });
-    $("#Description").blur(function () {
-        $("#Description").animate({ "height": "22px" }, "slow");
-        return false;
-    });
-
-    $(function () {
-        $("#targetinfo").popover();
-    });
-
-
-    function DecimalValidate(num) {
-        var regex = /^[-+]?[0-9]+(\.[0-9]+)?$/;
-        if (regex.test(num)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
-</script>
-
-@*@using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <h4>Menu</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Date, htmlAttributes: new { @class = "ui-datepicker span3", @style = "display:block;width:270px;;float:left", placeholder = "Enter the start date", @readonly = "readonly" }})
-                    @Html.ValidationMessageFor(model => model.Date)
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.OrganizationId, "Organization", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("OrganizationId", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.OrganizationId, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.DishId, "Dish", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("DishId", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.DishId, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Date, null, new { @class = "datePicker" })
+                @Html.ValidationMessageFor(model => model.Date)
             </div>
         </div>
-    }
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OrganizationId, "Organization", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("OrganizationId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OrganizationId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DishId, "Dish", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("DishId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DishId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
 
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>
+}
 
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-    <script type="text/javascript">
+@section Scripts {
+    @*@Scripts.Render("~/bundles/jqueryval")
+        <script type="text/javascript">
 
 
-        $(document).ready(function () {
+            $(document).ready(function () {
 
-            $('.ui-datepicker').each(function (i, v) {
-                $(v).datepicker({
-                    dateFormat: 'dd-M-yy',
-                    buttonImage: '@Url.Content("~/Content/calendar.gif")',
-                    buttonImageOnly: true,
-                    showOn: "button"
+                $('.ui-datepicker').each(function (i, v) {
+                    $(v).datepicker({
+                        dateFormat: 'dd-M-yy',
+                        buttonImage: '@Url.Content("~/Content/calendar.gif")',
+                        buttonImageOnly: true,
+                        showOn: "button"
+                    });
+
+                });
+
+                $('#form').submit(function (e) {
+                    var target = $('#Target').val();
+                    if (target != '') {
+                        if (DecimalValidate(target)) {
+                            $('#NumberValidation').html('');
+                            return true;
+                        }
+                        else {
+                            $('#NumberValidation').html('<label class="field-validation-error">Please enter valid status</label>');
+                            e.preventDefault();
+                            return false;
+                        }
+                    }
+
                 });
 
             });
 
-            $('#form').submit(function (e) {
-                var target = $('#Target').val();
-                if (target != '') {
-                    if (DecimalValidate(target)) {
-                        $('#NumberValidation').html('');
-                        return true;
-                    }
-                    else {
-                        $('#NumberValidation').html('<label class="field-validation-error">Please enter valid status</label>');
-                        e.preventDefault();
-                        return false;
-                    }
-                }
-
+            $("#Description").focus(function () {
+                $(this).animate({ "height": "60px" }, "slow");
+                return false;
+            });
+            $("#Description").blur(function () {
+                $("#Description").animate({ "height": "22px" }, "slow");
+                return false;
             });
 
-        });
-
-        $("#Description").focus(function () {
-            $(this).animate({ "height": "60px" }, "slow");
-            return false;
-        });
-        $("#Description").blur(function () {
-            $("#Description").animate({ "height": "22px" }, "slow");
-            return false;
-        });
-
-        $(function () {
-            $("#targetinfo").popover();
-        });
+            $(function () {
+                $("#targetinfo").popover();
+            });
 
 
-        function DecimalValidate(num) {
-            var regex = /^[-+]?[0-9]+(\.[0-9]+)?$/;
-            if (regex.test(num)) {
-                return true;
-            } else {
-                return false;
+            function DecimalValidate(num) {
+                var regex = /^[-+]?[0-9]+(\.[0-9]+)?$/;
+                if (regex.test(num)) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
-        }
 
 
-    </script>
-    }*@
+        </script>*@
+}

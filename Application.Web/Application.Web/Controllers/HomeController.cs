@@ -17,8 +17,6 @@ namespace Application.Web.Controllers
         // GET: Home
         public ActionResult Index(string sortOrder)
         {
-
-
             ViewBag.DishSortParm = string.IsNullOrEmpty(sortOrder) ? "Dish desc" : "";
             ViewBag.OraganizationSortParm = string.IsNullOrEmpty(sortOrder) ? "Oraganization desc" : "";
             ViewBag.DateSortParm = sortOrder == "Date" ? "Date desc" : "Date";

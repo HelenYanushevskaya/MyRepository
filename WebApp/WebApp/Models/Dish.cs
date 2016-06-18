@@ -10,14 +10,14 @@ namespace WebApp.Models
     {
         public int Id { get; set; }
 
-        //[Required]
+        [Required]
         public string Name { get; set; }
 
-        //[Required]
+        [Required]
         [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only please")]
         public string Ingredients { get; set; }
 
-        //[Required]
+        [Required]
         public int Weight { get; set; }
 
         public virtual ICollection<Menu> Menus { get; set; }

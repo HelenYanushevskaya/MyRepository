@@ -15,10 +15,29 @@ namespace WebApp.Controllers
         private AppContext db = new AppContext();
 
         // GET: Menus
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            var menus = db.Menus.Include(m => m.Dish).Include(m => m.Organization);
-            return View(menus.ToList());
+            ViewBag.DishSortParm = string.IsNullOrEmpty(sortOrder) ? "Dish desc" : "";
+            ViewBag.OraganizationSortParm = string.IsNullOrEmpty(sortOrder) ? "Oraganization desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "Date desc" : "Date";
+            var elements = from e in db.Menus
+                           select e;
+            switch (sortOrder)
+            {
+                case "Dish desc":
+                    elements = elements.OrderByDescending(e => e.Dish.Name);
+                    break;
+                case "Oraganization desc":
+                    elements = elements.OrderByDescending(e => e.Organization.Name);
+                    break;
+                case "Date desc":
+                    elements = elements.OrderByDescending(e => e.Date);
+                    break;
+                default:
+                    elements = elements.OrderBy(e => e.Date);
+                    break;
+            }
+            return View(elements.ToList());
         }
 
         // GET: Menus/Details/5

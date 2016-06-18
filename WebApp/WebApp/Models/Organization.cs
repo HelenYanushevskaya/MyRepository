@@ -10,10 +10,10 @@ namespace WebApp.Models
     {
         public int Id { get; set; }
 
-       // [Required]
+        [Required]
         public string Name { get; set; }
 
-     //   [Required]
+        [Required]
         public string Address { get; set; }
 
         [DataType(DataType.EmailAddress)]

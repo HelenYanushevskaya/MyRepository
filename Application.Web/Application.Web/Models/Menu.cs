@@ -8,10 +8,11 @@ namespace WebApp.Models
 {
     public class Menu
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
-        // [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
+        //[DisplayFormat(DataFormatString = "{0:dd'.'MMM'.'yyyy}")]
         public DateTime Date { get; set; }
 
         [Required]

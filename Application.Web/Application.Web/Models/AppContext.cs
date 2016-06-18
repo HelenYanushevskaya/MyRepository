@@ -10,9 +10,7 @@ namespace WebApp.Models
 {
     public class AppContext : DbContext
     {
-        public AppContext() :
-            base("DefaultConnection")
-        { }
+
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Organization> Organizations { get; set; }
         public DbSet<Dish> Dishes { get; set; }

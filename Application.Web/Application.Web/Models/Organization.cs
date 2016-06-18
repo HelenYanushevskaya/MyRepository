@@ -8,6 +8,7 @@ namespace WebApp.Models
 {
     public class Organization
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

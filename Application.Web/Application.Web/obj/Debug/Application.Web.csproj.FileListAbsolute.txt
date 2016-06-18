@@ -55,5 +55,5 @@ C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Applicati
 C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.csprojResolveAssemblyReference.cache
 C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.dll
 C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.Migrations.MigrationDB.resources
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.Migrations.DB.resources
 C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.csproj.GenerateResource.Cache

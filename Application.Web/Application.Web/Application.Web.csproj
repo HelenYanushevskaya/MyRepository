@@ -162,9 +162,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606171118437_MigrationDB.cs" />
-    <Compile Include="Migrations\201606171118437_MigrationDB.Designer.cs">
-      <DependentUpon>201606171118437_MigrationDB.cs</DependentUpon>
+    <Compile Include="Migrations\201606181758529_DB.cs" />
+    <Compile Include="Migrations\201606181758529_DB.Designer.cs">
+      <DependentUpon>201606181758529_DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppContext.cs" />
@@ -174,12 +174,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\MigrationDB.mdf" />
-    <Content Include="App_Data\MigrationDB_log.ldf">
-      <DependentUpon>MigrationDB.mdf</DependentUpon>
+    <Content Include="App_Data\DB.mdf" />
+    <Content Include="App_Data\DB_log.ldf">
+      <DependentUpon>DB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\calendar.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -238,10 +239,9 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201606171118437_MigrationDB.resx">
-      <DependentUpon>201606171118437_MigrationDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606181758529_DB.resx">
+      <DependentUpon>201606181758529_DB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

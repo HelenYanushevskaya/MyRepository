@@ -1,9 +1,10 @@
-﻿using Application.DAL.Entities;
+﻿using Application.DAL.EF;
+using Application.DAL.Entities;
 using Application.DAL.Interfaces;
-using Application.DAL.Models;
 using System;
 using System.Collections.Generic;
-
+using System.Data.Entity;
+using System.Linq;
 
 namespace Application.DAL.Repositories
 {
@@ -43,9 +44,9 @@ namespace Application.DAL.Repositories
 
         public void Delete(int id)
         {
-            Organization book = db.Organizations.Find(id);
-            if (book != null)
-                db.Organizations.Remove(book);
+            Organization organization = db.Organizations.Find(id);
+            if (organization != null)
+                db.Organizations.Remove(organization);
         }
     }
 }

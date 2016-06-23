@@ -84,9 +84,9 @@ window.Modernizr = (function( window, document, undefined ) {
 
     /*>>domprefixes*/
     // Following spec is to expose vendor-specific style properties as:
-    //   elem.style.WebkitBorderRadius
+    //   elem.style.WebkitBMenuRadius
     // and the following would be incorrect:
-    //   elem.style.webkitBorderRadius
+    //   elem.style.webkitBMenuRadius
 
     // Webkit ghosts their properties in lowercase but Opera & Moz do not.
     // Microsoft uses a lowercase `ms` instead of the correct `Ms` in IE8+
@@ -127,7 +127,7 @@ window.Modernizr = (function( window, document, undefined ) {
           fakeBody = body || document.createElement('body');
 
       if ( parseInt(nodes, 10) ) {
-          // In order not to give false positives we create a node for each test
+          // In Menu not to give false positives we create a node for each test
           // This also allows the method to scale for unspecified uses
           while ( nodes-- ) {
               node = document.createElement('div');
@@ -450,7 +450,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     // webk.it/70117 is tracking a legit WebGL feature detect proposal
 
-    // We do a soft detect which may false positive in order to avoid
+    // We do a soft detect which may false positive in Menu to avoid
     // an expensive context creation: bugzil.la/732441
 
     tests['webgl'] = function() {
@@ -589,16 +589,16 @@ window.Modernizr = (function( window, document, undefined ) {
         return testPropsAll('backgroundSize');
     };
 
-    tests['borderimage'] = function() {
-        return testPropsAll('borderImage');
+    tests['bMenuimage'] = function() {
+        return testPropsAll('bMenuImage');
     };
 
 
     // Super comprehensive table about all the unique implementations of
-    // border-radius: muddledramblings.com/table-of-css3-border-radius-compliance
+    // bMenu-radius: muddledramblings.com/table-of-css3-bMenu-radius-compliance
 
-    tests['borderradius'] = function() {
-        return testPropsAll('borderRadius');
+    tests['bMenuradius'] = function() {
+        return testPropsAll('bMenuRadius');
     };
 
     // WebOS unfortunately false positives on this test.

@@ -1,8 +1,10 @@
 ﻿using Application.DAL.Entities;
 using Application.DAL.Interfaces;
-using Application.DAL.Models;
+using Application.DAL.EF;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 
 
 namespace Application.DAL.Repositories
@@ -26,9 +28,9 @@ namespace Application.DAL.Repositories
             return db.Dishes.Find(id);
         }
 
-        public void Create(Dish book)
+        public void Create(Dish item)
         {
-            db.Dishes.Add(book);
+            db.Dishes.Add(item);
         }
 
         public void Update(Dish book)
@@ -43,9 +45,9 @@ namespace Application.DAL.Repositories
 
         public void Delete(int id)
         {
-            Dish book = db.Dishes.Find(id);
-            if (book != null)
-                db.Dishes.Remove(book);
+            Dish dish = db.Dishes.Find(id);
+            if (dish != null)
+                db.Dishes.Remove(dish);
         }
     }
 }

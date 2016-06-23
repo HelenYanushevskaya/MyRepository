@@ -1,17 +1,20 @@
 ﻿using Application.DAL.Entities;
-using System.Collections.Generic;
 using System.Data.Entity;
 
 
-namespace Application.DAL.Models
+namespace Application.DAL.EF
 {
     public class AppContext : DbContext
     {
+
+        //?
         public AppContext(string nameOrConnectionString) : base(nameOrConnectionString)
         {
-            Database.SetInitializer<AppContext>(new StoreDbInitializer())
+            Database.SetInitializer(new StoreDbInitializer());
         }
 
+
+        //инициализация данных
         public class StoreDbInitializer : DropCreateDatabaseIfModelChanges<AppContext>
         {
             protected override void Seed(AppContext db)
@@ -24,8 +27,10 @@ namespace Application.DAL.Models
             }
         }
 
-        public IEnumerable<Menu> Menus { get; set; }
-        public IEnumerable<Organization> Organizations { get; set; }
-        public IEnumerable<Dish> Dishes { get; set; }
+
+        //?
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
+        public DbSet<Dish> Dishes { get; set; }
     }
 }

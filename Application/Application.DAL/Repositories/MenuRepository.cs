@@ -1,9 +1,10 @@
-﻿using Application.DAL.Entities;
+﻿using Application.DAL.EF;
+using Application.DAL.Entities;
 using Application.DAL.Interfaces;
-using Application.DAL.Models;
 using System;
 using System.Collections.Generic;
-
+using System.Data.Entity;
+using System.Linq;
 
 namespace Application.DAL.Repositories
 {
@@ -43,9 +44,9 @@ namespace Application.DAL.Repositories
 
         public void Delete(int id)
         {
-            Menu book = db.Menus.Find(id);
-            if (book != null)
-                db.Menus.Remove(book);
+            Menu menu = db.Menus.Find(id);
+            if (menu != null)
+                db.Menus.Remove(menu);
         }
     }
 }

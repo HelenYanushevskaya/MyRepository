@@ -7,149 +7,203 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Application.WEB.Models;
+using Application.BLL.Interfaces;
+using Application.DAL.EF;
+using AutoMapper;
+using Application.BLL.DTO;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private AppContext db = new AppContext();
+        IMenuService MenuService;
 
-        // GET: Home
-        public ActionResult Index(string sortOrder)
+
+        public HomeController(IMenuService serv)
         {
-            ViewBag.DishSortParm = string.IsNullOrEmpty(sortOrder) ? "Dish desc" : "";
-            ViewBag.OraganizationSortParm = string.IsNullOrEmpty(sortOrder) ? "Oraganization desc" : "";
-            ViewBag.DateSortParm = sortOrder == "Date" ? "Date desc" : "Date";
-            var elements = from e in db.Menus
-                           select e;
-            switch (sortOrder)
-            {
-                case "Dish desc":
-                    elements = elements.OrderByDescending(e => e.Dish.Name);
-                    break;
-                case "Oraganization desc":
-                    elements = elements.OrderByDescending(e => e.Organization.Name);
-                    break;
-                case "Date desc":
-                    elements = elements.OrderByDescending(e => e.Date);
-                    break;
-                default:
-                    elements = elements.OrderBy(e => e.Date);
-                    break;
-            }
-            return View(elements.ToList());
+            MenuService = serv;
+        }
+        public ActionResult Index()
+        {
+            Mapper.CreateMap<DishDTO, Dish>();
+            var Dishs = Mapper.Map<IEnumerable<DishDTO>, List<DishViewModel>>(MenuService.GetDishs());
+            return View(Dishs);
         }
 
-        // GET: Home/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult MakeMenu(int? id)
         {
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                Mapper.CreateMap<DishDTO, Menu>()
+                    .ForMember("DishId", opt => opt.MapFrom(src => src.Id));
+                var Menu = Mapper.Map<DishDTO, Menu>(MenuService.GetDish(id));
+                return View(Menu);
             }
-            Menu menu = db.Menus.Find(id);
-            if (menu == null)
+            catch (ValidationException ex)
             {
-                return HttpNotFound();
+                return Content(ex.Message);
             }
-            return View(menu);
         }
-
-        // GET: Home/Create
-        public ActionResult Create()
-        {
-            ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name");
-            ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name");
-            return View();
-        }
-
-        // POST: Home/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Date,OrganizationId,DishId")] Menu menu)
+        public ActionResult MakeMenu(Menu menu)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Menus.Add(menu);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                Mapper.CreateMap<Menu, MenuDTO>();
+                var MenuDto = Mapper.Map<Menu, MenuDTO>(menu);
+                MenuService.MakeMenu(MenuDto);
+                return Content("<h2>Ваш заказ успешно оформлен</h2>");
             }
-
-            ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name", menu.DishId);
-            ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", menu.OrganizationId);
-            return View(menu);
-        }
-
-        // GET: Home/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
+            catch (ValidationException ex)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Menu menu = db.Menus.Find(id);
-            if (menu == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name", menu.DishId);
-            ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", menu.OrganizationId);
-            return View(menu);
-        }
-
-        // POST: Home/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Date,OrganizationId,DishId")] Menu menu)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(menu).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name", menu.DishId);
-            ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", menu.OrganizationId);
-            return View(menu);
-        }
-
-        // GET: Home/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Menu menu = db.Menus.Find(id);
-            if (menu == null)
-            {
-                return HttpNotFound();
+                ModelState.AddModelError(ex.Property, ex.Message);
             }
             return View(menu);
         }
-
-        // POST: Home/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Menu menu = db.Menus.Find(id);
-            db.Menus.Remove(menu);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                db.Dispose();
-            }
+            MenuService.Dispose();
             base.Dispose(disposing);
         }
     }
 }
+// GET: Home
+/*       public ActionResult Index(string sortMenu)
+       {
+           ViewBag.DishSortParm = string.IsNullOrEmpty(sortMenu) ? "Dish desc" : "";
+           ViewBag.OraganizationSortParm = string.IsNullOrEmpty(sortMenu) ? "Oraganization desc" : "";
+           ViewBag.DateSortParm = sortMenu == "Date" ? "Date desc" : "Date";
+           var elements = from e in db.Menus
+                          select e;
+           switch (sortMenu)
+           {
+               case "Dish desc":
+                   elements = elements.MenuByDescending(e => e.Dish.Name);
+                   break;
+               case "Oraganization desc":
+                   elements = elements.MenuByDescending(e => e.Organization.Name);
+                   break;
+               case "Date desc":
+                   elements = elements.MenuByDescending(e => e.Date);
+                   break;
+               default:
+                   elements = elements.MenuBy(e => e.Date);
+                   break;
+           }
+           return View(elements.ToList());
+       }
+
+       // GET: Home/Details/5
+       public ActionResult Details(int? id)
+       {
+           if (id == null)
+           {
+               return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+           }
+           Menu menu = db.Menus.Find(id);
+           if (menu == null)
+           {
+               return HttpNotFound();
+           }
+           return View(menu);
+       }
+
+       // GET: Home/Create
+       public ActionResult Create()
+       {
+           ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name");
+           ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name");
+           return View();
+       }
+
+       // POST: Home/Create
+       // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+       // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+       [HttpPost]
+       [ValidateAntiForgeryToken]
+       public ActionResult Create([Bind(Include = "Id,Date,OrganizationId,DishId")] Menu menu)
+       {
+           if (ModelState.IsValid)
+           {
+               db.Menus.Add(menu);
+               db.SaveChanges();
+               return RedirectToAction("Index");
+           }
+
+           ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name", menu.DishId);
+           ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", menu.OrganizationId);
+           return View(menu);
+       }
+
+       // GET: Home/Edit/5
+       public ActionResult Edit(int? id)
+       {
+           if (id == null)
+           {
+               return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+           }
+           Menu menu = db.Menus.Find(id);
+           if (menu == null)
+           {
+               return HttpNotFound();
+           }
+           ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name", menu.DishId);
+           ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", menu.OrganizationId);
+           return View(menu);
+       }
+
+       // POST: Home/Edit/5
+       // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+       // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+       [HttpPost]
+       [ValidateAntiForgeryToken]
+       public ActionResult Edit([Bind(Include = "Id,Date,OrganizationId,DishId")] Menu menu)
+       {
+           if (ModelState.IsValid)
+           {
+               db.Entry(menu).State = EntityState.Modified;
+               db.SaveChanges();
+               return RedirectToAction("Index");
+           }
+           ViewBag.DishId = new SelectList(db.Dishes, "Id", "Name", menu.DishId);
+           ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", menu.OrganizationId);
+           return View(menu);
+       }
+
+       // GET: Home/Delete/5
+       public ActionResult Delete(int? id)
+       {
+           if (id == null)
+           {
+               return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+           }
+           Menu menu = db.Menus.Find(id);
+           if (menu == null)
+           {
+               return HttpNotFound();
+           }
+           return View(menu);
+       }
+
+       // POST: Home/Delete/5
+       [HttpPost, ActionName("Delete")]
+       [ValidateAntiForgeryToken]
+       public ActionResult DeleteConfirmed(int id)
+       {
+           Menu menu = db.Menus.Find(id);
+           db.Menus.Remove(menu);
+           db.SaveChanges();
+           return RedirectToAction("Index");
+       }
+
+       protected override void Dispose(bool disposing)
+       {
+           if (disposing)
+           {
+               db.Dispose();
+           }
+           base.Dispose(disposing);
+       }
+   }
+}*/

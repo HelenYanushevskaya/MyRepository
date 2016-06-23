@@ -1,17 +1,15 @@
 ﻿using Application.DAL.Interfaces;
-using Application.DAL.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Application.DAL.Entities;
+using Application.DAL.EF;
 
 namespace Application.DAL.Repositories
 {
-    public class EFUnitOfWork : IUnitOfWork
+    //взаимодействовать с базой данных
+    public class EFUnitOfWork : IDisposable, IUnitOfWork
     {
         private AppContext db;
+
         private DishRepository dishRepository;
         private OrganizationRepository organizationRepository;
         private MenuRepository menuRepository;

@@ -1,0 +1,10 @@
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\Application.DAL.dll.config
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\Application.DAL.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\Application.DAL.pdb
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\obj\Debug\Application.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\obj\Debug\Application.DAL.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\obj\Debug\Application.DAL.pdb

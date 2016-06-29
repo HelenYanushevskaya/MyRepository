@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Application.BLL.Interfaces
 {
-    public interface IMenuService 
+    public interface IMenuService
     {
-        void MakeMenu (MenuDTO menuDto);
+        void MakeMenu(MenuDTO menuDto);
         DishDTO GetDish(int? id);
-        OrganizationDTO GetOrganization(int? id);
-        IEnumerable<OrganizationDTO> GetOrganizations();
         IEnumerable<DishDTO> GetDishes();
         void Dispose();
     }

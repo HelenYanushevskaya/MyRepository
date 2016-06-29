@@ -1575,11 +1575,11 @@ intellisense.annotate(jQuery.fn, {
     /// </signature>
   },
   'innerHeight': function() {
-    /// <summary>Get the current computed height for the first element in the set of matched elements, including padding but not bMenu.</summary>
+    /// <summary>Get the current computed height for the first element in the set of matched elements, including padding but not border.</summary>
     /// <returns type="Integer" />
   },
   'innerWidth': function() {
-    /// <summary>Get the current computed width for the first element in the set of matched elements, including padding but not bMenu.</summary>
+    /// <summary>Get the current computed width for the first element in the set of matched elements, including padding but not border.</summary>
     /// <returns type="Integer" />
   },
   'input': function() {
@@ -1999,14 +1999,14 @@ intellisense.annotate(jQuery.fn, {
   },
   'outerHeight': function() {
     /// <signature>
-    ///   <summary>Get the current computed height for the first element in the set of matched elements, including padding, bMenu, and optionally margin. Returns an integer (without "px") representation of the value or null if called on an empty set of elements.</summary>
+    ///   <summary>Get the current computed height for the first element in the set of matched elements, including padding, border, and optionally margin. Returns an integer (without "px") representation of the value or null if called on an empty set of elements.</summary>
     ///   <param name="includeMargin" type="Boolean">A Boolean indicating whether to include the element's margin in the calculation.</param>
     ///   <returns type="Integer" />
     /// </signature>
   },
   'outerWidth': function() {
     /// <signature>
-    ///   <summary>Get the current computed width for the first element in the set of matched elements, including padding and bMenu.</summary>
+    ///   <summary>Get the current computed width for the first element in the set of matched elements, including padding and border.</summary>
     ///   <param name="includeMargin" type="Boolean">A Boolean indicating whether to include the element's margin in the calculation.</param>
     ///   <returns type="Integer" />
     /// </signature>

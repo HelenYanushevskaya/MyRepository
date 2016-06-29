@@ -1,19 +1,14 @@
-﻿using Application.BLL.BusinessModels;
-using Application.BLL.DTO;
+﻿using Application.BLL.DTO;
 using Application.BLL.Infrastructure;
 using Application.BLL.Interfaces;
 using Application.DAL.Entities;
 using Application.DAL.Interfaces;
 using AutoMapper;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.BLL.Services
 {
-    class MenuService : IMenuService
+    public class MenuService : IMenuService
     {
         IUnitOfWork Database { get; set; }
 
@@ -37,37 +32,23 @@ namespace Application.BLL.Services
 
         public IEnumerable<DishDTO> GetDishes()
         {
-            Mapper.CreateMap<Dish  , DishDTO>();
+            Mapper.CreateMap<Dish, DishDTO>();
             return Mapper.Map<IEnumerable<Dish>, List<DishDTO>>(Database.Dishes.GetAll());
-        }
-
-        public OrganizationDTO GetOrganization(int? id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<OrganizationDTO> GetOrganizations()
-        {
-            Mapper.CreateMap<Organization, OrganizationDTO>();
-            return Mapper.Map<IEnumerable<Organization>, List<OrganizationDTO>>(Database.Organizations.GetAll());
         }
 
         public void MakeMenu(MenuDTO menuDto)
         {
             Dish dish = Database.Dishes.Get(menuDto.DishId);
-
+           
             // валидация
             if (dish == null)
-                throw new ValidationException("Телефон не найден", "");
-            // применяем скидку
-            decimal sum = new Converter(dish.Weight).GetConverter(dish.Weight);
+                throw new ValidationException("блюдо не найдено", "");
             Menu menu = new Menu
             {
-                Date = DateTime.Now,
-                OrganizationId = 1,
-                DishId = 1
+                Date = menuDto.Date,
+                DishId = menuDto.DishId
             };
-            Database.Menus.Create(organization);
+            Database.Menus.Create(menu);
             Database.Save();
         }
 

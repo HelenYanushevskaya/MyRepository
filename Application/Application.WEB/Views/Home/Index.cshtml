@@ -1,46 +1,41 @@
-﻿@model IEnumerable<Application.WEB.Models.Menu>
+﻿@model IEnumerable<Application.WEB.ViewModels.Dish>
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>list</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
-            @Html.ActionLink("Name of dish", "Index", new { sortMenu = ViewBag.DishSortParm }) 
+            @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.ActionLink("Name of organization", "Index", new { sortMenu = ViewBag.OrganizationSortParm }) 
+            @Html.DisplayNameFor(model => model.Ingredients)
         </th>
         <th>
-            @Html.ActionLink("Date", "Index", new { sortMenu = ViewBag.DateSortParm }) 
+            @Html.DisplayNameFor(model => model.Weight)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dish.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Organization.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ingredients)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.ActionLink("Buy", "MakeMenu", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>

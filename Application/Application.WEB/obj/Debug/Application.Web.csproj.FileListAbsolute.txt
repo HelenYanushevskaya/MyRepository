@@ -1,118 +1,70 @@
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\ApplicationInsights.config
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\csc.exe
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\vbc.exe
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\VBCSCompiler.exe
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Application.Web.dll.config
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Application.Web.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Application.Web.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Antlr3.Runtime.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\EntityFramework.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\EntityFramework.SqlServer.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.Web.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Newtonsoft.Json.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Helpers.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Mvc.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Optimization.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Razor.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.WebPages.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.WebPages.Razor.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\WebGrease.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\EntityFramework.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\EntityFramework.SqlServer.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.Web.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Helpers.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Mvc.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Optimization.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.Razor.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.WebPages.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\System.Web.WebPages.Razor.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Antlr3.Runtime.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\bin\Newtonsoft.Json.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.csprojResolveAssemblyReference.cache
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.Migrations.DB.resources
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application.Web\Application.Web\obj\Debug\Application.Web.csproj.GenerateResource.Cache
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\obj\Debug\Application.WEB.csprojResolveAssemblyReference.cache
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\obj\Debug\Application.Web.Migrations.DB.resources
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\obj\Debug\Application.WEB.csproj.GenerateResource.Cache
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\obj\Debug\Application.Web.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\obj\Debug\Application.Web.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\ApplicationInsights.config
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\csc.exe
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\vbc.exe
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\VBCSCompiler.exe
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Application.Web.dll.config
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Application.Web.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Application.Web.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Antlr3.Runtime.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\EntityFramework.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\EntityFramework.SqlServer.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.Web.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Newtonsoft.Json.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Helpers.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Mvc.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Optimization.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Razor.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.WebPages.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.WebPages.Razor.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\WebGrease.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\EntityFramework.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\EntityFramework.SqlServer.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.Web.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Helpers.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Mvc.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Optimization.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.Razor.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.WebPages.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\System.Web.WebPages.Razor.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Antlr3.Runtime.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.Web\bin\Newtonsoft.Json.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\ApplicationInsights.config
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\csc.exe
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\System.Collections.Immutable.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\vbc.exe
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\VBCSCompiler.exe
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\roslyn\VBCSCompiler.exe.config
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Application.WEB.dll.config
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Application.WEB.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Application.WEB.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Antlr3.Runtime.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.Web.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.WindowsServer.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.ApplicationInsights.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.Web.Infrastructure.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Newtonsoft.Json.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Helpers.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Mvc.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Optimization.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Razor.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.WebPages.Deployment.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.WebPages.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.WebPages.Razor.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\WebGrease.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.Web.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.AI.WindowsServer.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.ApplicationInsights.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Helpers.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Mvc.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Optimization.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.Razor.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.WebPages.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.WebPages.Deployment.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\System.Web.WebPages.Razor.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Antlr3.Runtime.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Newtonsoft.Json.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\obj\Debug\Application.WEB.csprojResolveAssemblyReference.cache
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\obj\Debug\Application.WEB.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\obj\Debug\Application.WEB.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Application.BLL.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\AutoMapper.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\EntityFramework.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\EntityFramework.SqlServer.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Ninject.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Ninject.Web.Common.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Ninject.Web.Mvc.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\WebActivatorEx.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Application.DAL.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Application.BLL.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\AutoMapper.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\EntityFramework.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\EntityFramework.SqlServer.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Ninject.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Ninject.Web.Common.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Ninject.Web.Mvc.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB\bin\Application.DAL.pdb

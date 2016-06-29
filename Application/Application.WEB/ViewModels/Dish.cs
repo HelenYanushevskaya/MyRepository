@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
-namespace Application.WEB.Models
+namespace Application.WEB.ViewModels
 {
     public class Dish
     {
@@ -13,6 +16,5 @@ namespace Application.WEB.Models
         public string Ingredients { get; set; }
         [Required]
         public int Weight { get; set; }
-         }
+    }
 }
-

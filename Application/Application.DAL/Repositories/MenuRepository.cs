@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Application.DAL.Repositories
 {
@@ -19,7 +21,7 @@ namespace Application.DAL.Repositories
 
         public IEnumerable<Menu> GetAll()
         {
-            return db.Menus;
+            return db.Menus.Include(o => o.Dish);
         }
 
         public Menu Get(int id)
@@ -27,19 +29,19 @@ namespace Application.DAL.Repositories
             return db.Menus.Find(id);
         }
 
-        public void Create(Menu book)
+        public void Create(Menu item)
         {
-            db.Menus.Add(book);
+            db.Menus.Add(item);
         }
 
-        public void Update(Menu book)
+        public void Update(Menu item)
         {
-            db.Entry(book).State = EntityState.Modified;
+            db.Entry(item).State = EntityState.Modified;
         }
 
         public IEnumerable<Menu> Find(Func<Menu, Boolean> predicate)
         {
-            return db.Menus.Where(predicate).ToList();
+            return db.Menus.Include(o => o.Dish).Where(predicate).ToList();
         }
 
         public void Delete(int id)

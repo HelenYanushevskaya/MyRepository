@@ -1,10 +1,10 @@
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\Application.DAL.dll.config
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\Application.DAL.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\Application.DAL.pdb
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\obj\Debug\Application.DAL.csprojResolveAssemblyReference.cache
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\obj\Debug\Application.DAL.dll
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.DAL\obj\Debug\Application.DAL.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\obj\Debug\Application.DAL.csprojResolveAssemblyReference.cache
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\bin\Debug\Application.DAL.dll.config
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\bin\Debug\Application.DAL.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\bin\Debug\Application.DAL.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\bin\Debug\EntityFramework.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\bin\Debug\EntityFramework.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\obj\Debug\Application.DAL.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.DAL\obj\Debug\Application.DAL.pdb

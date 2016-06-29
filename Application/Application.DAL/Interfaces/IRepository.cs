@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Application.DAL.Entities;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Application.DAL.Interfaces
 {

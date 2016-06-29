@@ -84,9 +84,9 @@ window.Modernizr = (function( window, document, undefined ) {
 
     /*>>domprefixes*/
     // Following spec is to expose vendor-specific style properties as:
-    //   elem.style.WebkitBMenuRadius
+    //   elem.style.WebkitBorderRadius
     // and the following would be incorrect:
-    //   elem.style.webkitBMenuRadius
+    //   elem.style.webkitBorderRadius
 
     // Webkit ghosts their properties in lowercase but Opera & Moz do not.
     // Microsoft uses a lowercase `ms` instead of the correct `Ms` in IE8+
@@ -127,7 +127,7 @@ window.Modernizr = (function( window, document, undefined ) {
           fakeBody = body || document.createElement('body');
 
       if ( parseInt(nodes, 10) ) {
-          // In Menu not to give false positives we create a node for each test
+          // In order not to give false positives we create a node for each test
           // This also allows the method to scale for unspecified uses
           while ( nodes-- ) {
               node = document.createElement('div');
@@ -450,7 +450,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     // webk.it/70117 is tracking a legit WebGL feature detect proposal
 
-    // We do a soft detect which may false positive in Menu to avoid
+    // We do a soft detect which may false positive in order to avoid
     // an expensive context creation: bugzil.la/732441
 
     tests['webgl'] = function() {
@@ -461,7 +461,7 @@ window.Modernizr = (function( window, document, undefined ) {
      * The Modernizr.touch test only indicates if the browser supports
      *    touch events, which does not necessarily reflect a touchscreen
      *    device, as evidenced by tablets running Windows 7 or, alas,
-     *    the Palm Pre / WebOS (touch) Dishes.
+     *    the Palm Pre / WebOS (touch) phones.
      *
      * Additionally, Chrome (desktop) used to lie about its support on this,
      *    but that has since been rectified: crbug.com/36415
@@ -589,16 +589,16 @@ window.Modernizr = (function( window, document, undefined ) {
         return testPropsAll('backgroundSize');
     };
 
-    tests['bMenuimage'] = function() {
-        return testPropsAll('bMenuImage');
+    tests['borderimage'] = function() {
+        return testPropsAll('borderImage');
     };
 
 
     // Super comprehensive table about all the unique implementations of
-    // bMenu-radius: muddledramblings.com/table-of-css3-bMenu-radius-compliance
+    // border-radius: muddledramblings.com/table-of-css3-border-radius-compliance
 
-    tests['bMenuradius'] = function() {
-        return testPropsAll('bMenuRadius');
+    tests['borderradius'] = function() {
+        return testPropsAll('borderRadius');
     };
 
     // WebOS unfortunately false positives on this test.
@@ -780,7 +780,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
                 // Mimetypes accepted:
                 //   developer.mozilla.org/En/Media_formats_supported_by_the_audio_and_video_elements
-                //   bit.ly/iDisheoscodecs
+                //   bit.ly/iphoneoscodecs
                 bool.wav  = elem.canPlayType('audio/wav; codecs="1"')     .replace(/^no$/,'');
                 bool.m4a  = ( elem.canPlayType('audio/x-m4a;')            ||
                               elem.canPlayType('audio/aac;'))             .replace(/^no$/,'');

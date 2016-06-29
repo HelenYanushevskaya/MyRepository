@@ -1,1 +1,14 @@
-C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\obj\Debug\Application.BLL.csprojResolveAssemblyReference.cache
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\Application.BLL.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\Application.BLL.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\obj\Debug\Application.BLL.csprojResolveAssemblyReference.cache
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\obj\Debug\Application.BLL.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\obj\Debug\Application.BLL.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\Application.DAL.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\AutoMapper.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\Ninject.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\EntityFramework.dll
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\Application.DAL.pdb
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\AutoMapper.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\Ninject.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\EntityFramework.xml
+c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\AutoMapper.Net4.dll

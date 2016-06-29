@@ -1054,7 +1054,7 @@ var i,
 	tokenCache = createCache(),
 	compilerCache = createCache(),
 	hasDuplicate = false,
-	sortMenu = function( a, b ) {
+	sortOrder = function( a, b ) {
 		if ( a === b ) {
 			hasDuplicate = true;
 			return 0;
@@ -1368,7 +1368,7 @@ function addHandle( attrs, handler ) {
 }
 
 /**
- * Checks document Menu of two siblings
+ * Checks document order of two siblings
  * @param {Element} a
  * @param {Element} b
  * @returns {Number} Returns less than 0 if a precedes b, greater than 0 if a follows b
@@ -1705,8 +1705,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 	/* Sorting
 	---------------------------------------------------------------------- */
 
-	// Document Menu sorting
-	sortMenu = docElem.compareDocumentPosition ?
+	// Document order sorting
+	sortOrder = docElem.compareDocumentPosition ?
 	function( a, b ) {
 
 		// Flag for duplicate removal
@@ -1730,7 +1730,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 					return 1;
 				}
 
-				// Maintain original Menu
+				// Maintain original order
 				return sortInput ?
 					( indexOf.call( sortInput, a ) - indexOf.call( sortInput, b ) ) :
 					0;
@@ -1877,7 +1877,7 @@ Sizzle.uniqueSort = function( results ) {
 	// Unless we *know* we can detect duplicates, assume their presence
 	hasDuplicate = !support.detectDuplicates;
 	sortInput = !support.sortStable && results.slice( 0 );
-	results.sort( sortMenu );
+	results.sort( sortOrder );
 
 	if ( hasDuplicate ) {
 		while ( (elem = results[i++]) ) {
@@ -2923,7 +2923,7 @@ function select( selector, context, results, seed ) {
 // One-time assignments
 
 // Sort stability
-support.sortStable = expando.split("").sort( sortMenu ).join("") === expando;
+support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
 
 // Support: Chrome<14
 // Always assume duplicates if they aren't passed to the comparison function
@@ -3480,7 +3480,7 @@ jQuery.support = (function( support ) {
 	// Run tests that need a body at doc ready
 	jQuery(function() {
 		var container, marginDiv, tds,
-			divReset = "padding:0;margin:0;bMenu:0;display:block;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;",
+			divReset = "padding:0;margin:0;border:0;display:block;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;",
 			body = document.getElementsByTagName("body")[0];
 
 		if ( !body ) {
@@ -3489,7 +3489,7 @@ jQuery.support = (function( support ) {
 		}
 
 		container = document.createElement("div");
-		container.style.cssText = "bMenu:0;width:0;height:0;position:absolute;top:0;left:-9999px;margin-top:1px";
+		container.style.cssText = "border:0;width:0;height:0;position:absolute;top:0;left:-9999px;margin-top:1px";
 
 		body.appendChild( container ).appendChild( div );
 
@@ -3502,7 +3502,7 @@ jQuery.support = (function( support ) {
 		// hidden; don safety goggles and see bug #4512 for more information).
 		div.innerHTML = "<table><tr><td></td><td>t</td></tr></table>";
 		tds = div.getElementsByTagName("td");
-		tds[ 0 ].style.cssText = "padding:0;margin:0;bMenu:0;display:none";
+		tds[ 0 ].style.cssText = "padding:0;margin:0;border:0;display:none";
 		isSupported = ( tds[ 0 ].offsetHeight === 0 );
 
 		tds[ 0 ].style.display = "";
@@ -3514,7 +3514,7 @@ jQuery.support = (function( support ) {
 
 		// Check box-sizing and margin behavior.
 		div.innerHTML = "";
-		div.style.cssText = "box-sizing:bMenu-box;-moz-box-sizing:bMenu-box;-webkit-box-sizing:bMenu-box;padding:1px;bMenu:1px;display:block;width:4px;margin-top:1%;position:absolute;top:1%;";
+		div.style.cssText = "box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:1px;border:1px;display:block;width:4px;margin-top:1%;position:absolute;top:1%;";
 
 		// Workaround failing boxSizing test due to offsetWidth returning wrong value
 		// with some non-1 values of body zoom, ticket #13543
@@ -3634,7 +3634,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ){
 	thisCache = cache[ id ];
 
 	// jQuery data() is stored in a separate object inside the object's internal data
-	// cache in Menu to avoid key collisions between internal data and user-defined
+	// cache in order to avoid key collisions between internal data and user-defined
 	// data.
 	if ( !pvt ) {
 		if ( !thisCache.data ) {
@@ -4689,7 +4689,7 @@ jQuery.each([
 	"rowSpan",
 	"colSpan",
 	"useMap",
-	"frameBMenu",
+	"frameBorder",
 	"contentEditable"
 ], function() {
 	jQuery.propFix[ this.toLowerCase() ] = this;
@@ -5915,7 +5915,7 @@ jQuery.each({
 				ret = jQuery.unique( ret );
 			}
 
-			// Reverse Menu for parents* and prev-derivatives
+			// Reverse order for parents* and prev-derivatives
 			if ( rparentsprev.test( name ) ) {
 				ret = ret.reverse();
 			}
@@ -6977,7 +6977,7 @@ jQuery.extend({
 		"fontWeight": true,
 		"lineHeight": true,
 		"opacity": true,
-		"Menu": true,
+		"order": true,
 		"orphans": true,
 		"widows": true,
 		"zIndex": true,
@@ -7194,8 +7194,8 @@ function setPositiveNumber( elem, value, subtract ) {
 		value;
 }
 
-function augmentWidthOrHeight( elem, name, extra, isBMenuBox, styles ) {
-	var i = extra === ( isBMenuBox ? "bMenu" : "content" ) ?
+function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {
+	var i = extra === ( isBorderBox ? "border" : "content" ) ?
 		// If we already have the right measurement, avoid augmentation
 		4 :
 		// Otherwise initialize for horizontal or vertical properties
@@ -7209,23 +7209,23 @@ function augmentWidthOrHeight( elem, name, extra, isBMenuBox, styles ) {
 			val += jQuery.css( elem, extra + cssExpand[ i ], true, styles );
 		}
 
-		if ( isBMenuBox ) {
-			// bMenu-box includes padding, so remove it if we want content
+		if ( isBorderBox ) {
+			// border-box includes padding, so remove it if we want content
 			if ( extra === "content" ) {
 				val -= jQuery.css( elem, "padding" + cssExpand[ i ], true, styles );
 			}
 
-			// at this point, extra isn't bMenu nor margin, so remove bMenu
+			// at this point, extra isn't border nor margin, so remove border
 			if ( extra !== "margin" ) {
-				val -= jQuery.css( elem, "bMenu" + cssExpand[ i ] + "Width", true, styles );
+				val -= jQuery.css( elem, "border" + cssExpand[ i ] + "Width", true, styles );
 			}
 		} else {
 			// at this point, extra isn't content, so add padding
 			val += jQuery.css( elem, "padding" + cssExpand[ i ], true, styles );
 
-			// at this point, extra isn't content nor padding, so add bMenu
+			// at this point, extra isn't content nor padding, so add border
 			if ( extra !== "padding" ) {
-				val += jQuery.css( elem, "bMenu" + cssExpand[ i ] + "Width", true, styles );
+				val += jQuery.css( elem, "border" + cssExpand[ i ] + "Width", true, styles );
 			}
 		}
 	}
@@ -7235,11 +7235,11 @@ function augmentWidthOrHeight( elem, name, extra, isBMenuBox, styles ) {
 
 function getWidthOrHeight( elem, name, extra ) {
 
-	// Start with offset property, which is equivalent to the bMenu-box value
-	var valueIsBMenuBox = true,
+	// Start with offset property, which is equivalent to the border-box value
+	var valueIsBorderBox = true,
 		val = name === "width" ? elem.offsetWidth : elem.offsetHeight,
 		styles = getStyles( elem ),
-		isBMenuBox = jQuery.support.boxSizing && jQuery.css( elem, "boxSizing", false, styles ) === "bMenu-box";
+		isBorderBox = jQuery.support.boxSizing && jQuery.css( elem, "boxSizing", false, styles ) === "border-box";
 
 	// some non-html elements return undefined for offsetWidth, so check for null/undefined
 	// svg - https://bugzilla.mozilla.org/show_bug.cgi?id=649285
@@ -7258,7 +7258,7 @@ function getWidthOrHeight( elem, name, extra ) {
 
 		// we need the check for style in case a browser which returns unreliable values
 		// for getComputedStyle silently falls back to the reliable elem.style
-		valueIsBMenuBox = isBMenuBox && ( jQuery.support.boxSizingReliable || val === elem.style[ name ] );
+		valueIsBorderBox = isBorderBox && ( jQuery.support.boxSizingReliable || val === elem.style[ name ] );
 
 		// Normalize "", auto, and prepare for extra
 		val = parseFloat( val ) || 0;
@@ -7269,8 +7269,8 @@ function getWidthOrHeight( elem, name, extra ) {
 		augmentWidthOrHeight(
 			elem,
 			name,
-			extra || ( isBMenuBox ? "bMenu" : "content" ),
-			valueIsBMenuBox,
+			extra || ( isBorderBox ? "border" : "content" ),
+			valueIsBorderBox,
 			styles
 		)
 	) + "px";
@@ -7288,7 +7288,7 @@ function css_defaultDisplay( nodeName ) {
 		if ( display === "none" || !display ) {
 			// Use the already-created iframe if possible
 			iframe = ( iframe ||
-				jQuery("<iframe framebMenu='0' width='0' height='0'/>")
+				jQuery("<iframe frameborder='0' width='0' height='0'/>")
 				.css( "cssText", "display:block !important" )
 			).appendTo( doc.documentElement );
 
@@ -7337,7 +7337,7 @@ jQuery.each([ "height", "width" ], function( i, name ) {
 					elem,
 					name,
 					extra,
-					jQuery.support.boxSizing && jQuery.css( elem, "boxSizing", false, styles ) === "bMenu-box",
+					jQuery.support.boxSizing && jQuery.css( elem, "boxSizing", false, styles ) === "border-box",
 					styles
 				) : 0
 			);
@@ -7443,7 +7443,7 @@ if ( jQuery.expr && jQuery.expr.filters ) {
 jQuery.each({
 	margin: "",
 	padding: "",
-	bMenu: "Width"
+	border: "Width"
 }, function( prefix, suffix ) {
 	jQuery.cssHooks[ prefix + suffix ] = {
 		expand: function( value ) {
@@ -8020,7 +8020,7 @@ jQuery.extend({
 		// Extract dataTypes list
 		s.dataTypes = jQuery.trim( s.dataType || "*" ).toLowerCase().match( core_rnotwhite ) || [""];
 
-		// A cross-domain request is in Menu when we have a protocol:host:port mismatch
+		// A cross-domain request is in order when we have a protocol:host:port mismatch
 		if ( s.crossDomain == null ) {
 			parts = rurl.exec( s.url.toLowerCase() );
 			s.crossDomain = !!( parts &&
@@ -9583,7 +9583,7 @@ jQuery.fn.offset = function( options ) {
 	}
 
 	// If we don't have gBCR, just use 0,0 rather than error
-	// BlackBerry 5, iOS 3 (original iDishe)
+	// BlackBerry 5, iOS 3 (original iPhone)
 	if ( typeof elem.getBoundingClientRect !== core_strundefined ) {
 		box = elem.getBoundingClientRect();
 	}
@@ -9666,9 +9666,9 @@ jQuery.fn.extend({
 				parentOffset = offsetParent.offset();
 			}
 
-			// Add offsetParent bMenus
-			parentOffset.top  += jQuery.css( offsetParent[ 0 ], "bMenuTopWidth", true );
-			parentOffset.left += jQuery.css( offsetParent[ 0 ], "bMenuLeftWidth", true );
+			// Add offsetParent borders
+			parentOffset.top  += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true );
+			parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true );
 		}
 
 		// Subtract parent offsets and element margins
@@ -9732,7 +9732,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 		// margin is only for outerHeight, outerWidth
 		jQuery.fn[ funcName ] = function( margin, value ) {
 			var chainable = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
-				extra = defaultExtra || ( margin === true || value === true ? "margin" : "bMenu" );
+				extra = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
 
 			return jQuery.access( this, function( elem, type, value ) {
 				var doc;

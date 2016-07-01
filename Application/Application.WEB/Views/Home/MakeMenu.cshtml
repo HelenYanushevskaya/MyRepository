@@ -1,4 +1,4 @@
-﻿@model Application.WEB.ViewModels.Menu
+﻿@model Application.WEB.ViewModels.MenuView
 
 @{
     ViewBag.Title = "MakeMenu";
@@ -7,11 +7,20 @@
 <h2>Menu</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Ajax.BeginForm(
+        "MakeMenu",
+		"home",
+		new AjaxOptions
+        {
+            HttpMethod = "post",
+            UpdateTargetId = "target",
+            LoadingElementId = "sendingProgress",
+            InsertionMode = InsertionMode.Replace
+        }))
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
         <h4>MenuViewModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })

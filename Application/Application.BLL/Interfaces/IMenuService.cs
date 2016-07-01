@@ -11,7 +11,10 @@ namespace Application.BLL.Interfaces
     {
         void MakeMenu(MenuDTO menuDto);
         DishDTO GetDish(int? id);
+        OrganizationDTO GetOrganization(int? id);
+        IEnumerable<OrganizationDTO> GetOrganizations();
         IEnumerable<DishDTO> GetDishes();
         void Dispose();
     }
 }
+

@@ -38,3 +38,6 @@ c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\A
 c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB.Tests\obj\Debug\Application.WEB.Tests.csprojResolveAssemblyReference.cache
 c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB.Tests\obj\Debug\Application.WEB.Tests.dll
 c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.WEB.Tests\obj\Debug\Application.WEB.Tests.pdb
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.WEB.Tests\obj\Debug\Application.WEB.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.WEB.Tests\obj\Debug\Application.WEB.Tests.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.WEB.Tests\obj\Debug\Application.WEB.Tests.pdb

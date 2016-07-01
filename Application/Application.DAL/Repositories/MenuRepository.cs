@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.DAL.Repositories
 {
-    public class MenuRepository : IRepository<Menu>
+    public class MenuRepository : IRepository<MenuEntity>
     {
         private AppContext db;
 
@@ -19,34 +19,34 @@ namespace Application.DAL.Repositories
             this.db = context;
         }
 
-        public IEnumerable<Menu> GetAll()
+        public IEnumerable<MenuEntity> GetAll()
         {
-            return db.Menus.Include(o => o.Dish);
+            return db.Menus.Include(o => o.Dish).Include(o => o.Organization);
         }
 
-        public Menu Get(int id)
+        public MenuEntity Get(int id)
         {
             return db.Menus.Find(id);
         }
 
-        public void Create(Menu item)
+        public void Create(MenuEntity item)
         {
             db.Menus.Add(item);
         }
 
-        public void Update(Menu item)
+        public void Update(MenuEntity item)
         {
             db.Entry(item).State = EntityState.Modified;
         }
 
-        public IEnumerable<Menu> Find(Func<Menu, Boolean> predicate)
+        public IEnumerable<MenuEntity> Find(Func<MenuEntity, Boolean> predicate)
         {
-            return db.Menus.Include(o => o.Dish).Where(predicate).ToList();
+            return db.Menus.Include(o => o.Dish).Include(o => o.Organization).Where(predicate).ToList();
         }
 
         public void Delete(int id)
         {
-            Menu menu = db.Menus.Find(id);
+            MenuEntity menu = db.Menus.Find(id);
             if (menu != null)
                 db.Menus.Remove(menu);
         }

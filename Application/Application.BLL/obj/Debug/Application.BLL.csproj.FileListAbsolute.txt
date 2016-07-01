@@ -12,3 +12,19 @@ c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\A
 c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\Ninject.xml
 c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\EntityFramework.xml
 c:\users\elena yanushevskaya\documents\visual studio 2015\Projects\Application\Application.BLL\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\obj\Debug\Application.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\obj\Debug\Application.BLL.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\obj\Debug\Application.BLL.pdb
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\Application.BLL.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\Application.BLL.pdb
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\Application.DAL.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\AutoMapper.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\AutoMapper.Net4.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\Ninject.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\EntityFramework.dll
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\Application.DAL.pdb
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\AutoMapper.xml
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\Ninject.xml
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\EntityFramework.xml
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\AutoMapper.pdb
+C:\Users\Elena Yanushevskaya\Source\Repos\MyRepository\Application\Application.BLL\bin\Debug\AutoMapper.Net4.pdb

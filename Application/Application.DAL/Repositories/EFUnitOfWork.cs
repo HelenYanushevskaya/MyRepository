@@ -1,28 +1,25 @@
-﻿using Application.DAL.EF;
-using Application.DAL.Entities;
-using Application.DAL.Interfaces;
+﻿using Application.DAL.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Application.DAL.Entities;
+using Application.DAL.EF;
 
 namespace Application.DAL.Repositories
 {
-    //взаимодействие с базой данных
+    //взаимодействовать с базой данных
     public class EFUnitOfWork : IDisposable, IUnitOfWork
     {
         private AppContext db;
 
         private DishRepository dishRepository;
-       private MenuRepository menuRepository;
+        private OrganizationRepository organizationRepository;
+        private MenuRepository menuRepository;
 
         public EFUnitOfWork(string connnectionString)
         {
             db = new AppContext(connnectionString);
         }
 
-        public IRepository<Dish> Dishes
+        public IRepository<DishEntity> Dishes
         {
             get
             {
@@ -32,7 +29,17 @@ namespace Application.DAL.Repositories
             }
         }
 
-        public IRepository<Menu> Menus
+        public IRepository<OrganizationEntity> Organizations
+        {
+            get
+            {
+                if (organizationRepository == null)
+                    organizationRepository = new OrganizationRepository(db);
+                return organizationRepository;
+            }
+        }
+
+        public IRepository<MenuEntity> Menus
         {
             get
             {

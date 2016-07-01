@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
-using AutoMapper;
-using Application.BLL.DTO;
+﻿using Application.BLL.DTO;
 using Application.BLL.Services;
 using Application.WEB.ViewModels;
+using AutoMapper;
+using System.Collections.Generic;
+using System.Web.Mvc;
 
-namespace Application.Web.Controllers
+namespace Application.WEB.Controllers
 {
     public class HomeController : Controller
     {
@@ -16,26 +16,26 @@ namespace Application.Web.Controllers
         }
         public ActionResult Index()
         {
-            Mapper.CreateMap<DishDTO, Dish>();
-            var phones = Mapper.Map<IEnumerable<DishDTO>, List<Dish>>(menuService.GetDishes());
-            return View(phones);
+            Mapper.CreateMap<DishDTO, DishView>();
+            var dish = Mapper.Map<IEnumerable<DishDTO>, List<DishView>>(menuService.GetDishes());
+            return View(dish);
         }
 
         public ActionResult MakeMenu(int? id)
         {
-            Mapper.CreateMap<MenuDTO, Menu>()
+            Mapper.CreateMap<MenuDTO, MenuView>()
                 .ForMember("DishId", opt => opt.MapFrom(src => src.Id));
-            var menu = Mapper.Map<DishDTO, Menu>(menuService.GetDish(id));
+            var menu = Mapper.Map<DishDTO, MenuView>(menuService.GetDish(id));
             return View(menu);
 
 
         }
         [HttpPost]
-        public ActionResult MakeMenu(Menu menu)
+        public ActionResult MakeMenu(MenuView menu)
         {
 
-            Mapper.CreateMap<Menu, MenuDTO>();
-            var menuDto = Mapper.Map<Menu, MenuDTO>(menu);
+            Mapper.CreateMap<MenuView, MenuDTO>();
+            var menuDto = Mapper.Map<MenuView, MenuDTO>(menu);
             menuService.MakeMenu(menuDto);
 
             return View(menu);

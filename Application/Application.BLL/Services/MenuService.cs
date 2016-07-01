@@ -5,11 +5,13 @@ using Application.DAL.Entities;
 using Application.DAL.Interfaces;
 using AutoMapper;
 using System.Collections.Generic;
+using System;
 
 namespace Application.BLL.Services
 {
     public class MenuService : IMenuService
     {
+        private DishRepository dishRepository;
         IUnitOfWork Database { get; set; }
 
         public MenuService(IUnitOfWork uow)
@@ -26,24 +28,35 @@ namespace Application.BLL.Services
             if (dish == null)
                 throw new ValidationException("Error", "");
             // применяем автомаппер для проекции Dish на DishDTO
-            Mapper.CreateMap<Dish, DishDTO>();
-            return Mapper.Map<Dish, DishDTO>(dish);
+            var Id = dishRepository.Get(id);
+            return userRepository.GetById(userId);
+
         }
 
         public IEnumerable<DishDTO> GetDishes()
         {
-            Mapper.CreateMap<Dish, DishDTO>();
-            return Mapper.Map<IEnumerable<Dish>, List<DishDTO>>(Database.Dishes.GetAll());
+            Mapper.CreateMap<DishEntity, DishDTO>();
+            return Mapper.Map<IEnumerable<DishEntity>, List<DishDTO>>(Database.Dishes.GetAll());
+            // return null;
+            //  Mapper.Map<IEnumerable<Dish>, List<DishDTO>>(Database.Dishes.GetAll());
+             List<DishDTO> list = new List<DishDTO> { };
+             var dish = dishRepository.GetAll();
+             foreach (var item in dish)
+             {
+                 list.Add(item);
+             }
+             return list;
         }
+
 
         public void MakeMenu(MenuDTO menuDto)
         {
-            Dish dish = Database.Dishes.Get(menuDto.DishId);
+            DishEntity dish = Database.Dishes.Get(menuDto.DishId);
            
             // валидация
             if (dish == null)
                 throw new ValidationException("блюдо не найдено", "");
-            Menu menu = new Menu
+            MenuEntity menu = new MenuEntity
             {
                 Date = menuDto.Date,
                 DishId = menuDto.DishId
@@ -55,6 +68,24 @@ namespace Application.BLL.Services
         public void Dispose()
         {
             Database.Dispose();
+        }
+
+        public OrganizationDTO GetOrganization(int? id)
+        {
+            if (id == null)
+                throw new ValidationException("You dont have id", "");
+            var dish = Database.Organizations.Get(id.Value);
+            if (dish == null)
+                throw new ValidationException("Error", "");
+            //применяем автомаппер для проекции Dish на DishDTO
+            Mapper.CreateMap<OrganizationEntity, OrganizationDTO>();
+            return Mapper.Map<OrganizationEntity, OrganizationDTO>(dish);
+        }
+
+        public IEnumerable<OrganizationDTO> GetOrganizations()
+        {
+            Mapper.CreateMap<OrganizationEntity, OrganizationDTO>();
+            return Mapper.Map<IEnumerable<OrganizationEntity>, List<OrganizationDTO>>(Database.Organizations.GetAll());
         }
     }
 }

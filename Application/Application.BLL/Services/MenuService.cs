@@ -22,30 +22,25 @@ namespace Application.BLL.Services
         public DishDTO GetDish(int? id)
         {
 
-            if (id == null)
+           /* if (id == null)
                 throw new ValidationException("You dont have id", "");
             var dish = Database.Dishes.Get(id.Value);
             if (dish == null)
-                throw new ValidationException("Error", "");
-            // применяем автомаппер для проекции Dish на DishDTO
-            var Id = dishRepository.Get(id);
-            return userRepository.GetById(userId);
+                throw new ValidationException("Error", "");*/
+           
+            var dishId = dishRepository.Get(c => c.Id == id).Id;
+            return dishRepository.Get(dishId);
 
         }
 
         public IEnumerable<DishDTO> GetDishes()
         {
-            Mapper.CreateMap<DishEntity, DishDTO>();
-            return Mapper.Map<IEnumerable<DishEntity>, List<DishDTO>>(Database.Dishes.GetAll());
+            // Mapper.CreateMap<DishEntity, DishDTO>();
+            // return Mapper.Map<IEnumerable<DishEntity>, List<DishDTO>>(Database.Dishes.GetAll());
             // return null;
             //  Mapper.Map<IEnumerable<Dish>, List<DishDTO>>(Database.Dishes.GetAll());
-             List<DishDTO> list = new List<DishDTO> { };
-             var dish = dishRepository.GetAll();
-             foreach (var item in dish)
-             {
-                 list.Add(item);
-             }
-             return list;
+            var item = dishRepository.GetAll();
+            return item;
         }
 
 

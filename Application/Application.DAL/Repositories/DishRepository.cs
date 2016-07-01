@@ -10,27 +10,25 @@ using System.Linq.Expressions;
 public class DishRepository : IRepository<DishEntity>
 {
     private AppContext db;
-    private IDbSet<DishEntity> dbset;
-
     public DishRepository(AppContext context)
     {
         this.db = context;
     }
 
-    /* public IEnumerable<DishEntity> GetAll()
-     {
-         return db.Dishes;
-     }*/
-
-    public DishEntity Get(Expression<Func<DishEntity, bool>> where)
+    public IEnumerable<DishEntity> GetAll()
     {
-        return dbset.Where(where).FirstOrDefault<T>();
+        return db.Dishes.ToList();
     }
-     
-    /* public DishEntity Get(int id)
-     {
-         return db.Dishes.Find(id);
-     }*/
+
+    public DishEntity Get(int? id)
+    {
+        return db.Dishes.Find(id);
+    }
+
+    public DishEntity Get(int id)
+    {
+        return db.Dishes.Find(id);
+    }
 
     public void Create(DishEntity item)
     {
@@ -52,5 +50,10 @@ public class DishRepository : IRepository<DishEntity>
         DishEntity dish = db.Dishes.Find(id);
         if (dish != null)
             db.Dishes.Remove(dish);
+    }
+
+    public DishEntity Get(Expression<Func<DishEntity, bool>> where)
+    {
+        return db.Dishes.Where(where).FirstOrDefault<DishEntity>();
     }
 }

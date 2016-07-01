@@ -61,6 +61,7 @@
     <Compile Include="Entities\MenuEntity.cs" />
     <Compile Include="Entities\DishEntity.cs" />
     <Compile Include="Entities\OrganizationEntity.cs" />
+    <Compile Include="Interfaces\IDatabaseFactory.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
